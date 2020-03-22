@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IceFactory_API</name>
+    </assembly>
+    <members>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.GetProductsList(System.Object)">
+            <summary>
+            All Products List
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx"
+            }</param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.SaveViewQuotation(System.Object)">
+            <summary>
+            Save and View Quotation
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx",
+            "customerId":88,
+            "payTerm": 88  [optional],
+            "products":[{"product_id":88,"product_qty":8.8,"price_unit":8.8 ,"vat_include":true},
+                       {"product_id":88,"product_qty":8.8,"price_unit":8.8 ,"vat_include":true}],
+            "location":"xxxxxxxx"           
+            }</param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.ConfirmInvoice(System.Object)">
+            <summary>
+            Confirm creating Invoice
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx",
+            "id":8
+            }</param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.GetOrdersCompleted(System.Object,System.Nullable{System.Int32})">
+             <summary>
+             Get Completed invoices
+             </summary>
+             <param name="args">{
+             "userName":"xxxxxxxxxxxxx",
+             "password":"xxxxxxxx", 
+             "date":"2020-01-13",   [optional] 
+             "searchBy":"xxxxx"  [optional]  
+             }</param>
+            <param name="page"></param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.GetInvoice_byId(System.Object)">
+            <summary>
+            Get completed Invoice by Id
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx", 
+            "id":8
+            }</param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.GetUnitPriceByList(System.Object)">
+            <summary>
+            Get unit price by price list id
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx",
+            "priceList_id":8,
+            "product_id":88  [optional]
+            }</param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.PartnerController.Create(System.Object)">
+             <summary>
+             Create Customer
+             </summary>
+             <param name="args">
+            {
+            "userName":"xxxxx",
+            "password":"xxxxx",
+            "name":"xxxxxxx",
+            "mobile":"xxxxxxxx",
+            "long":"52152",
+            "lat":"4554",
+            "address":"ghjklgjgjgjhgj",
+            "payTerm":8,
+            "priceList":8,
+            "salesPerson":8
+            }
+            </param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.PartnerController.Update(System.Object)">
+             <summary>
+             Update Customer
+             </summary>
+             <param name="args">
+            {
+            "userName":"xxxxx",
+            "password":"xxxxx",
+            "id":8,
+            "name":"xxxxxxx",
+            "mobile":"xxxxxxxx",
+            "long":"52152",
+            "lat":"4554",
+            "address":"ghjklgjgjgjhgj",
+            "payTerm":8,
+            "priceList":8,
+            "salesPerson":8
+            }
+            </param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.PartnerController.GetCustomersList(System.Object,System.Nullable{System.Int32})">
+             <summary>
+             Search Customers by name, phone or mobile with paging
+             </summary>
+             <param name="args">
+            {
+             "userName":"xxxxxxxxxxxxx",
+             "password":"xxxxxxxx",
+             "searchBy":"xxxxxx"
+            }
+            </param>
+            <param name="page"></param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.PartnerController.GetById(System.Object)">
+             <summary>
+             Get Customer Details by Id
+             </summary>
+             <param name="args">
+            {
+             "userName":"xxxxxxxxxxxxx",
+             "password":"xxxxxxxx",
+             "id":88,
+            }
+            </param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.PartnerController.PaymnetTermsList(System.Object)">
+            <summary>
+            List all Payment Terms
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx"
+            }</param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.PartnerController.PriceLists(System.Object)">
+            <summary>
+            List all PriceLists
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx"
+            }</param>
+        </member>
+        <member name="T:IceFactory_API.Controllers.PrintController">
+            <summary></summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="M:IceFactory_API.Controllers.PrintController.#ctor(Microsoft.Extensions.Options.IOptions{IceFactory_API.Models.MySettingsModel},System.Net.Http.IHttpClientFactory)">
+            <summary>Initializes a new instance of the <see cref="T:IceFactory_API.Controllers.PrintController"/> class.</summary>
+            <param name="app">The application.</param>
+            <param name="clientFactory">The client factory.</param>
+        </member>
+        <member name="M:IceFactory_API.Controllers.PrintController.Invoice(System.Int32)">
+            <summary>Invoices the specified identifier.</summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IceFactory_API.Controllers.StockController.Report(System.Object)">
+            <summary>
+            Dashboard report
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx",
+            "date":"2020-02-27"
+            }</param>
+        </member>
+        <member name="M:IceFactory_API.Ext.ToInt(System.Object)">
+            <summary>
+            Convert Object To Int .
+            </summary>
+            <param name="o">Object</param>
+            <returns>Int</returns>
+        </member>
+        <member name="M:IceFactory_API.Ext.ToDecimal(System.Object)">
+            <summary>
+            Convert Object To Decimal .
+            </summary>
+            <param name="o">Object</param>
+            <returns>Decimal</returns>
+        </member>
+        <member name="M:IceFactory_API.Ext.ToFloat(System.Object)">
+            <summary>
+            Convert Object To Float .
+            </summary>
+            <param name="o">Object</param>
+            <returns>Float</returns>
+        </member>
+        <member name="M:IceFactory_API.Ext.ToDouble(System.Object)">
+            <summary>
+            Convert Object To double .
+            </summary>
+            <param name="o">Object</param>
+            <returns>double</returns>
+        </member>
+        <member name="M:MegaSales_Odoo_API.Controllers.UserController.Authenticate(System.Object)">
+            <summary>
+            Login Method
+            </summary>
+            <param name="args">{"userName":"xxxxxxxxxxxxx","password":"xxxxxxxx"}</param>
+        </member>
+        <member name="T:Serializer`1">
+            <summary></summary>
+        </member>
+        <member name="M:Serializer`1.Serialize(`0)">
+            <summary></summary>
+        </member>
+        <member name="M:Serializer`1.Serialize(`0,System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:Serializer`1.Desrialize(System.String)">
+            <summary></summary>
+        </member>
+    </members>
+</doc>
