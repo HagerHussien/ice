@@ -70,6 +70,17 @@
             "product_id":88  [optional]
             }</param>
         </member>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.Cancel(System.Object)">
+            <summary>
+            Cancel Invoice
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx",
+            "id":8,
+            "order_id":8
+            }</param>
+        </member>
         <member name="M:IceFactory_API.Controllers.PartnerController.Create(System.Object)">
              <summary>
              Create Customer
@@ -164,6 +175,11 @@
         <member name="M:IceFactory_API.Controllers.PrintController.Invoice(System.Int32)">
             <summary>Invoices the specified identifier.</summary>
             <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IceFactory_API.Controllers.StockController.GetRemainingQTYBalance(OdooRpcWrapper.OdooAPI)">
+            <summary>Gets the remaining qty balance.</summary>
+            <param name="api">The API.</param>
             <returns></returns>
         </member>
         <member name="M:IceFactory_API.Controllers.StockController.Report(System.Object)">
