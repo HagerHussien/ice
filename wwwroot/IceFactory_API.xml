@@ -81,6 +81,16 @@
             "order_id":8
             }</param>
         </member>
+        <member name="M:IceFactory_API.Controllers.InvoiceController.CancelQuotation(System.Object)">
+            <summary>
+            Cancel Quotation
+            </summary>
+            <param name="args">{
+            "userName":"xxxxxxxxxxxxx",
+            "password":"xxxxxxxx",
+            "order_id":8
+            }</param>
+        </member>
         <member name="M:IceFactory_API.Controllers.PartnerController.Create(System.Object)">
              <summary>
              Create Customer
